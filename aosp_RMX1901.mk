@@ -9,12 +9,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
-# Inherit some common blaze stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# Inherit some common sky stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Blaze  Stuff
-BLAZE_BUILD_TYPE := unofficial
-BLAZE_MAINTAINER := Shravansayzz
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_BLUR := true
@@ -27,17 +24,6 @@ WITH_GAPPS := true
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 
-# Aperture Camera (default: not defined - skipped by the compiler)
-TARGET_EXCLUDES_APERTURE := true
-
-# Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := tru
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_BLUR := true
-TARGET_EXCLUDES_AUDIOFX := true
-
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -45,7 +31,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := blaze_RMX1901
+PRODUCT_NAME := aosp_RMX1901
 PRODUCT_MODEL := Realme X
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
