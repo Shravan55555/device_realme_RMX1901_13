@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # maintainer flag (one word only/no spacing)
-RISING_MAINTAINER := Shravan
+RISING_MAINTAINER := 𝙎 ʜ ʀ ᴀ ᴠ ᴀ 𝙉
 
 # chipset flag (one word only/no spacing)
 RISING_CHIPSET := sdm710
@@ -36,7 +36,7 @@ TARGET_HAS_UDFPS := true
 TARGET_EXCLUDES_APERTURE := true
 
 # Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_USE_GOOGLE_TELEPHONY := false
 
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 TARGET_EXCLUDES_SEEDVAULT := true
