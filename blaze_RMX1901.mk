@@ -9,29 +9,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
-# Inherit some common Rising stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common blaze stuff.
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
-
-
-# Sushi Bootanimation (only 720/1080p/1440 supported. if not defined, bootanimation is google bootanimation)
+# Blaze  Stuff
+BLAZE_BUILD_TYPE := unofficial
+BLAZE_MAINTAINER := Shravansayzz
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# disable/enable blur support, default is false
-TARGET_ENABLE_BLUR := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USE_PIXEL_CHARGER := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_GAPPS := true
 
 # UDFPS ICONS/ANIMATIONS
 TARGET_HAS_UDFPS := true
-
+EXTRA_UDFPS_ANIMATIONS := true
 
 # Aperture Camera (default: not defined - skipped by the compiler)
 TARGET_EXCLUDES_APERTURE := true
 
 # Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_BUILD_GAPPS := true
-YAAP_BUILDTYPE := HOMEMADE
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_EXCLUDES_SEEDVAULT := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := tru
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
@@ -45,7 +45,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := yaap_RMX1901
+PRODUCT_NAME := blaze_RMX1901
 PRODUCT_MODEL := Realme X
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
