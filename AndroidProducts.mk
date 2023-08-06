@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixys_RMX1901.mk
+    $(LOCAL_DIR)/voltage_RMX1901.mk
 
 COMMON_LUNCH_CHOICES := \
-    pixys_RMX1901-userdebug \
-    pixys_RMX1901-eng
+    voltage_RMX1901-userdebug \
+    voltage_RMX1901-eng
 
