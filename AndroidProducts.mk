@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_RMX1901.mk
+    $(LOCAL_DIR)/droidx_RMX1901.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_RMX1901-userdebug \
-    superior_RMX1901-eng
+    droidx_RMX1901-userdebug \
+    droidx_RMX1901-eng
 
