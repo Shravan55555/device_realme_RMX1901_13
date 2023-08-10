@@ -10,24 +10,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
 # Inherit some common Rising stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
-SUPERIOR_UDFPS_ANIMATIONS := true
-SUPERIOR_BUILD_TYPE := EXTENDED
-BUILD_WITH_GAPPS := true
+DROIDX_BUILD_TYPE := UNOFFICIAL
+DROIDX_GAPPS := true
 TARGET_ENABLE_BLUR := true
 TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
 TARGET_EXCLUDES_APERTURE := true
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_BLUR := true
-TARGET_EXCLUDES_AUDIOFX := true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.superior.maintainer=SHRAVAN (SK)
+TARGET_USE_PIXEL_CHARGER := true
+DROIDX_MAINTAINER := SHRAVAN (SK)
 
 
 # Inherit from RMX1901 device
