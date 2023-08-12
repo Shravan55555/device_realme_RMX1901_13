@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # maintainer flag (one word only/no spacing)
-RISING_MAINTAINER := 𝙎 ʜ ʀ ᴀ ᴠ ᴀ 𝙉
+RISING_MAINTAINER := SHRAVAN (SK)
 
 # chipset flag (one word only/no spacing)
 RISING_CHIPSET := sdm710
