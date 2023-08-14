@@ -36,7 +36,7 @@ TARGET_HAS_UDFPS := true
 TARGET_EXCLUDES_APERTURE := true
 
 # Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_USE_GOOGLE_TELEPHONY := false
+TARGET_USE_GOOGLE_TELEPHONY := true
 
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 TARGET_EXCLUDES_SEEDVAULT := true
@@ -45,7 +45,7 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_BLUR := true
 TARGET_EXCLUDES_AUDIOFX := true
-
+TARGET_DISABLE_EPPE := true
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
