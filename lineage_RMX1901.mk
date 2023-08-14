@@ -12,6 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Rising stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+TARGET_DISABLE_EPPE := true
+
 # maintainer flag (one word only/no spacing)
 RISING_MAINTAINER := SHRAVAN (SK)
 
