@@ -5,9 +5,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.ambisonic.capture=false \
     persist.vendor.audio.avs.afe_api_version=2 \
     persist.vendor.audio.fluence.audiorec=true \
-    persist.vendor.audio.fluence.speaker=false \
+    persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.tmic.enabled=false \
-    persist.vendor.audio.fluence.voicecall=false \
+    persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.hifi.int_codec=true \
     persist.vendor.audio.ras.enabled=false \
@@ -15,8 +15,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.fluencetype=none \
     ro.vendor.audio.sdk.ssr=false \
     vendor.audio.apptype.multirec.enabled=false \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.feature.a2dp_offload.enable=true \
     vendor.audio.feature.afe_proxy.enable=true \
     vendor.audio.feature.anc_headset.enable=true \
@@ -91,7 +89,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Blur
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=0 \
+    ro.surface_flinger.supports_background_blur=1 \
+    ro.sf.blurs_are_expensive=1
 
 # Cached app compaction
 persist.device_config.activity_manager.use_compaction=true
@@ -126,6 +125,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.cabl=2 \
     vendor.display.disable_rotator_downscale=1
 
+# Dolby
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
+    ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
+    ro.vendor.product.device.db=OP_DEVICE \
+    ro.vendor.product.manufacturer.db=OP_PHONE \
+    vendor.product.device=OP_PHONE \
+    vendor.product.manufacturer=OPD
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
@@ -138,10 +147,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qti.inputopts.enable=true \
     persist.vendor.qti.inputopts.movetouchslop=0.6 \
     ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
-
-# FS-verity
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.apk_verity.mode=2
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -165,11 +170,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true \
     ro.surface_flinger.protected_contents=true
-    debug.sf.auto_latch_unsignaled=true   
+    debug.sf.auto_latch_unsignaled=true
     debug.sf.enable_gl_backpressure=1
-
-# Phantom process monitoring
-sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
