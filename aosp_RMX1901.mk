@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Rising stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# disable/enable blur support, default is false
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR := true
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
