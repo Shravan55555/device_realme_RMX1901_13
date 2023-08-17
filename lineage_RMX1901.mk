@@ -13,33 +13,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # maintainer flag (one word only/no spacing)
-RISING_MAINTAINER := Shravan
+ALPHA_MAINTAINER := SHRAVAN
+WITH_GAPPS := 1
 
-# chipset flag (one word only/no spacing)
-RISING_CHIPSET := sdm710
-
-# gapps build flag, if not defined build type is vanilla
-WITH_GMS := true
-TARGET_CORE_GMS := false
-
-# Sushi Bootanimation (only 720/1080p/1440 supported. if not defined, bootanimation is google bootanimation)
-SUSHI_BOOTANIMATION := 1080
 
 # disable/enable blur support, default is false
 TARGET_ENABLE_BLUR := true
 
 # UDFPS ICONS/ANIMATIONS
 TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
 
-
-# Aperture Camera (default: not defined - skipped by the compiler)
-TARGET_EXCLUDES_APERTURE := true
 
 # Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_USE_GOOGLE_TELEPHONY := true
-
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_EXCLUDES_SEEDVAULT := true
+TARGET_USE_GOOGLE_TELEPHONY := false
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
