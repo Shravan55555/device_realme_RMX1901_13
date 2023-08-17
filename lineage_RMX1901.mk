@@ -15,7 +15,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # maintainer flag (one word only/no spacing)
 ALPHA_MAINTAINER := SHRAVAN
 WITH_GAPPS := 1
-
+TARGET_DISABLE_EPPE := true
 
 # disable/enable blur support, default is false
 TARGET_ENABLE_BLUR := true
