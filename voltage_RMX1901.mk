@@ -10,41 +10,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
 # Inherit some common Rising stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
-# maintainer flag (one word only/no spacing)
-RISING_MAINTAINER := Shravan
-
-# chipset flag (one word only/no spacing)
-RISING_CHIPSET := sdm710
-
-# gapps build flag, if not defined build type is vanilla
-WITH_GMS := true
-TARGET_CORE_GMS := false
-
-# Sushi Bootanimation (only 720/1080p/1440 supported. if not defined, bootanimation is google bootanimation)
-SUSHI_BOOTANIMATION := 1080
-
-# disable/enable blur support, default is false
-TARGET_ENABLE_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USE_PIXEL_CHARGER := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
 # UDFPS ICONS/ANIMATIONS
 TARGET_HAS_UDFPS := true
-
-
-# Aperture Camera (default: not defined - skipped by the compiler)
-TARGET_EXCLUDES_APERTURE := true
-
-# Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_USE_GOOGLE_TELEPHONY := true
-
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_EXCLUDES_SEEDVAULT := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_QUICK_TAP := true
+EXTRA_UDFPS_ANIMATIONS := true
 TARGET_USES_BLUR := true
-TARGET_EXCLUDES_AUDIOFX := true
 
 
 # Inherit from RMX1901 device
@@ -53,7 +33,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := lineage_RMX1901
+PRODUCT_NAME := voltage_RMX1901
 PRODUCT_MODEL := Realme X
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
