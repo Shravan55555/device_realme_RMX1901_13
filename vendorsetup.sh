@@ -4,4 +4,4 @@ cd kernel/realme/RMX1901 && git submodule sync && git submodule update --init --
 
 echo 'Patching Realme In-Screen Proximity [2/2]'
 # Realme In-Screen Proximity Patch
-cd frameworks/base && git fetch https://github.com/shravansayz/proximity_patch.git && git cherry-pick de630e735cdbb68a606d3bbbf8b1674be31bab2d && cd ../..
+cd frameworks/base && git fetch https://github.com/Shravan55555/proximity_patch.git && git cherry-pick de630e735cdbb68a606d3bbbf8b1674be31bab2d && cd ../..
