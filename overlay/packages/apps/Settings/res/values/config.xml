@@ -14,12 +14,12 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-<!-- Battery health -->
-    <string name="config_batteryChargeCycles">/sys/class/power_supply/battery/batt_soh</string>
-    <string name="config_batteryDesignCapacity">/sys/class/power_supply/battery/charge_full</string>
-    <string name="config_batteryCalculatedCapacity">/sys/class/power_supply/battery/batt_fcc</string>
-    <bool name="config_supportBatteryHealth">true</bool>
 
+<!-- Battery Health -->
+    <string name="config_batteryCalculatedCapacity">/sys/class/power_supply/bms/charge_full</string>
+    <string name="config_batteryDesignCapacity">/sys/class/power_supply/bms/charge_full_design</string>
+    <string name="config_batteryChargeCycles">/sys/class/power_supply/bms/cycle_count</string>
+    <bool name="config_supportBatteryHealth">true</bool>
 
 <!-- The number of vibration intensity levels supported by the device.
          Note that this should correspond to the ability to vary the vibration amplitude, with
